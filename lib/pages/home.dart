@@ -4,7 +4,8 @@ import 'package:genset_app/pages/about.dart';
 import 'package:genset_app/pages/kontak.dart';
 import 'package:genset_app/pages/status.dart';
 import 'package:genset_app/pages/tipe.dart';
-
+import 'package:genset_app/pages/video.dart';
+import 'package:genset_app/pages/video_mcb.dart';
 import 'tips.dart';
 
 class Home extends StatefulWidget {
@@ -159,33 +160,89 @@ class _HomeState extends State<Home> {
               height: 20,
             ),
             ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Kontak()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(110, 45),
-                        foregroundColor: Colors.black,
-                        backgroundColor: colorBackground1,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(color: colorBackground, width: 2),
-                          borderRadius: BorderRadius.circular(20),
-                        )),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.contact_phone,
-                          size: 100,
-                        ),
-                        Text(
-                          "Kontak Kami",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Video()));
+                },
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(110, 45),
+                    foregroundColor: Colors.black,
+                    backgroundColor: colorBackground1,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: colorBackground, width: 2),
+                      borderRadius: BorderRadius.circular(20),
                     )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.video_camera_back,
+                      size: 100,
+                    ),
+                    Text(
+                      "Video \nPemakaian \nGenset",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => VideoMcb()));
+                },
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(110, 45),
+                    foregroundColor: Colors.black,
+                    backgroundColor: colorBackground1,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: colorBackground, width: 2),
+                      borderRadius: BorderRadius.circular(20),
+                    )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.video_camera_back,
+                      size: 100,
+                    ),
+                    Text(
+                      "Video \nPemakaian \nMCB",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Kontak()));
+                },
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(110, 45),
+                    foregroundColor: Colors.black,
+                    backgroundColor: colorBackground1,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: colorBackground, width: 2),
+                      borderRadius: BorderRadius.circular(20),
+                    )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.contact_phone,
+                      size: 100,
+                    ),
+                    Text(
+                      "Kontak Kami",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
             const SizedBox(
               height: 20,
             ),
